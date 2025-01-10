@@ -3,10 +3,12 @@
 }
 
 
+
 @media only screen and (max-width: 450px) {
 
     body {
         background-color: #FCFCFC;
+        font-family: 'Open Sauce Sans', sans-serif;
     }
     
 }
