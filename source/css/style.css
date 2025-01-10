@@ -3,18 +3,25 @@
     --gris: #494748;
     --blanc: #FCFCFC;
 }
+@import  url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
 @media only screen and (max-width: 450px) {
 
     body {
-        background-color: #FCFCFC;
+        background-color: var(--blanc);
         font-family: 'Open Sauce Sans', sans-serif;
 
     }
+    .logoPartie1{
+        color: var(--gris);
+    }
     .logoPartie2{
-        color : #EE5E37;
+        color : var(--orange);
+    }
+    h2{
+        color: var(--gris);
     }
     
 }
