@@ -2,26 +2,67 @@
     --orange: #EE5E37;
     --gris: #494748;
     --blanc: #FCFCFC;
+    --jaune: #FEDF41;
 }
 @import  url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    overflow-y: hidden;
+}
 
 
 
 @media only screen and (max-width: 450px) {
 
     body {
-        background-color: var(--blanc);
+        background-image:url(../images/fond_page_accueil.png);
+        z-index: -1;
         font-family: 'Open Sauce Sans', sans-serif;
 
     }
-    .logoPartie1{
+    .titre{
         color: var(--gris);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3rem;
     }
     .logoPartie2{
         color : var(--orange);
     }
     h2{
-        color: var(--gris);
+        font-size: 1.563rem;
+        font-weight: 600;
+
     }
-    
+    h1{
+        font-size: 5.75rem;
+        font-weight: 900;
+        position: relative;
+    }
+    .sticker{
+        position: absolute;
+        bottom: 553px;
+        left: 42px;
+        z-index: 1;
+        transform: translateX(-10px);
+    }
+    .decorationFond{
+        position: absolute;
+        bottom: -940px;
+        transform: scale(1.35);
+        z-index: -1;
+    }
+    .demarrer{
+        display: flex;
+        justify-content: center;
+        margin-top: 31rem;
+    }
+    .motDemarrer{
+        font-size: 1.375rem;
+        font-weight: 800;
+        color: var(--gris);
+        background-color: var(--jaune);
+        padding: 16px 46px;
+        border-radius: 31px;
+    }
 }
