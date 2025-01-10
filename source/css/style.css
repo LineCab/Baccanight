@@ -1,5 +1,7 @@
 :root {
     --orange: #EE5E37;
+    --gris: #494748;
+    --blanc: #FCFCFC;
 }
 
 
@@ -9,6 +11,10 @@
     body {
         background-color: #FCFCFC;
         font-family: 'Open Sauce Sans', sans-serif;
+
+    }
+    .logoPartie2{
+        color : #EE5E37;
     }
     
 }
