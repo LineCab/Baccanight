@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BienVu</title>
+    <link href="https://befonts.com/open-sauce-font-family.html" rel="stylesheet">
+    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="source/css/style.css">
+    <style>
+        body{
+            padding: 0 4rem;
+        }
+
+        h2{
+            color: var(--gris);
+            text-align: center;
+            font-size: 1.375rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 124.009%;
+        }
+
+        p{
+            color: var(--gris);
+        }
+
+        .contenu{
+            display: flex;
+            width: fit-content;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .titre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            align-self: stretch;
+        }
+
+        .zoneCode{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+            align-self: stretch;
+        }
+
+        #codeInput{
+            display: flex;
+            padding: 0.625rem;
+            align-items: center;
+            align-self: stretch;
+            border-radius: 0.625rem;
+            border: 1px solid #D6D6D6;
+        }
+
+        .btnValider{
+            display: inline-flex;
+            padding: 1rem 2.5rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.625rem;
+            background: #FF6F3C;
+            color: var(--blanc);
+        }
+    </style>
+</head>
+<body>
+    <h1>Vérification de code</h1>
+    <div class="contenu">
+        <div class="titre">
+            <h2>Quel est le tableau correspondant ?</h2>
+            <p>Inscris son code ci-dessous</p>
+        </div>
+        <div class="zoneCode">
+            <input type="number" id="codeInput" placeholder="Code du tableau">
+            <button id="checkCodeButton" class="btnValider">Valider</button>
+        </div>
+    </div>
+
+    <script>
+        const validCode = 48;
+
+        document.getElementById("checkCodeButton").addEventListener("click", function () {
+            const userCode = parseInt(document.getElementById("codeInput").value, 10);
+
+            const messageElement = document.getElementById("message");
+
+            if (userCode === validCode) {
+                window.location.href = "success.html";
+            } else {
+                window.location.href = "fail.html";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BienVu</title>
+    <link href="https://befonts.com/open-sauce-font-family.html" rel="stylesheet">
+    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="source/css/style.css">
+    <style>
+        body{
+            height: 100vh;
+            padding: 0 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contenu{
+            display: flex;
+            width: 17.5rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .zoneContinuer{
+            display: flex;
+            width: 15.9375rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btnContinue{
+            display: flex;
+            height: 2.75rem;
+            padding: 0 2.875rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.625rem;
+            background: #FEDF41;
+            color: var(--noir);
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <img src="source/images/jauneInterrogation.svg" alt="mascotte interrogation" width="50rem">
+    <div class="contenu">
+        <h1>Bien Vu !</h1>
+        <p>Ce détail appartient bien à ce tableau</p>
+    </div>
+    <div class="zoneContinuer">
+        <p>Continue pour le prochain mystère !</p>
+        <button id="btnContinuer" class="btnContinue">Continuer</button>
+    </div>
+</body>
