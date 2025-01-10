@@ -1,0 +1,12 @@
+:root {
+    --orange: #EE5E37;
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    body {
+        background-color: lightblue;
+    }
+    
+}
