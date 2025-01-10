@@ -6,9 +6,7 @@
     --noir: #030303;
 }
 @import  url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-    overflow-y: hidden;
-}
+
 
 
 
@@ -17,6 +15,10 @@ body{
     body {
         background-image:url(../images/fond_page_accueil.png);
         z-index: -1;
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+        /* overflow: hidden; */
         font-family: 'Open Sauce Sans', sans-serif;
     }
 
@@ -83,8 +85,10 @@ body{
     }
     .decorationFond{
         position: absolute;
-        top: 500px;
-        transform: scale(1.35);
+        top: calc(100% - 300px);
+        width: 140%;
+        left: -20%;
+        max-width: none;
         z-index: -1;
     }
     .demarrer{
