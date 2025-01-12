@@ -3,8 +3,9 @@
         background-image:url(../images/fond_page_accueil.png);
         z-index: -1;
         width: 100vw;
+        /* height: 100vh; */
         overflow-x: hidden;
-        position: relative;
+        /* position: relative; */
         /* overflow: hidden; */
         font-family: 'Open Sauce Sans', sans-serif;
     }
@@ -13,7 +14,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: 3rem;
+        margin-top: 10%;
     }
     .bienvenue{
         font-size: 1.563rem;
@@ -31,15 +32,16 @@
     }
     .decorationFond{
         position: absolute;
-        top: calc(100% - 300px);
-        width: 140%;
-        left: -20%;
+        /* top: calc(100% - 500px); */
+        top: 35%;
+        width: 100%;
         max-width: none;
         z-index: -1;
     }
     .demarrer{
-        display: flex;
-        justify-content: center;
-        margin-top: 31rem;
+        position: absolute;
+        left: 50%;
+        top: 88%;
+        transform: translate(-50%, -50%);
     }
 }
