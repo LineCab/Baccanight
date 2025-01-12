@@ -13,12 +13,7 @@
 @media only screen and (max-width: 450px) {
 
     body {
-        background-image:url(../images/fond_page_accueil.png);
-        z-index: -1;
         width: 100vw;
-        overflow-x: hidden;
-        position: relative;
-        /* overflow: hidden; */
         font-family: 'Open Sauce Sans', sans-serif;
     }
 
@@ -59,116 +54,4 @@
         background-color: var(--orange);
     }
 
-    
-    /*---- Page accueil ----*/
-
-    .titre{
-        color: var(--gris);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 3rem;
-    }
-    .bienvenue{
-        font-size: 1.563rem;
-        font-weight: 600;
-    }
-    .logoPartie2{
-        color : var(--orange);
-    }
-    .sticker{
-        position: absolute;
-        bottom: 553px;
-        left: 42px;
-        z-index: 1;
-        transform: translateX(-10px);
-    }
-    .decorationFond{
-        position: absolute;
-        top: calc(100% - 300px);
-        width: 140%;
-        left: -20%;
-        max-width: none;
-        z-index: -1;
-    }
-    .demarrer{
-        display: flex;
-        justify-content: center;
-        margin-top: 31rem;
-    }
-
-    /*---- Page quiz ----*/
-
-    .contenuQuiz{
-        display: flex;
-        width: fit-content;
-        flex-direction: column;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .enTeteQuiz{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        align-self: stretch;
-    }
-
-    .zoneCode{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-        align-self: stretch;
-    }
-
-    #codeInput{
-        display: flex;
-        padding: 0.625rem;
-        align-items: center;
-        align-self: stretch;
-        border-radius: 0.625rem;
-        border: 1px solid #D6D6D6;
-    }
-
-    .btnValider{
-        display: inline-flex;
-        padding: 1rem 2.5rem;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.625rem;
-        background: #FF6F3C;
-        color: var(--blanc);
-    }
-
-    /*---- Page Sucess ----*/
-
-    .contenuSucess{
-        display: flex;
-        width: 17.5rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
-    }
-    
-    .zoneContinuer{
-        display: flex;
-        width: 15.9375rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .btnContinue{
-        display: flex;
-        height: 2.75rem;
-        padding: 0 2.875rem;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.625rem;
-        background: #FEDF41;
-        color: var(--noir);
-        font-weight: 800;
-    }
 }

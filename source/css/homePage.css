@@ -1,0 +1,45 @@
+@media only screen and (max-width: 450px){
+    body {
+        background-image:url(../images/fond_page_accueil.png);
+        z-index: -1;
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+        /* overflow: hidden; */
+        font-family: 'Open Sauce Sans', sans-serif;
+    }
+    .titre{
+        color: var(--gris);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .bienvenue{
+        font-size: 1.563rem;
+        font-weight: 600;
+    }
+    .logoPartie2{
+        color : var(--orange);
+    }
+    .sticker{
+        position: absolute;
+        bottom: 553px;
+        left: 42px;
+        z-index: 1;
+        transform: translateX(-10px);
+    }
+    .decorationFond{
+        position: absolute;
+        top: calc(100% - 300px);
+        width: 140%;
+        left: -20%;
+        max-width: none;
+        z-index: -1;
+    }
+    .demarrer{
+        display: flex;
+        justify-content: center;
+        margin-top: 31rem;
+    }
+}

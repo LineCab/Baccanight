@@ -1,0 +1,45 @@
+
+@media only screen and (max-width: 450px){
+    .contenuQuiz{
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .enTeteQuiz{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        align-self: stretch;
+    }
+
+    .zoneCode{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+
+    #codeInput{
+        display: flex;
+        padding: 0.625rem;
+        align-items: center;
+        align-self: stretch;
+        border-radius: 0.625rem;
+        border: 1px solid #D6D6D6;
+    }
+
+    .btnValider{
+        display: inline-flex;
+        padding: 1rem 2.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.625rem;
+        background: #FF6F3C;
+        color: var(--blanc);
+    }
+}
