@@ -1,4 +1,20 @@
 @media only screen and (max-width: 450px)  {
+    body{
+        height: 100vh;
+        padding: 20px 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--orange);
+        background-image: url(../images/etoilesFondOrange.png);
+    }
+
+    p{
+        text-align: center;
+        color: var(--blanc);
+    }
+
     .contenuSucess{
         display: flex;
         width: 17.5rem;
