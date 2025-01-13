@@ -5,7 +5,7 @@
         width: 100vw;
         /* height: 100vh; */
         overflow-x: hidden;
-        /* position: relative; */
+        position: relative;
         /* overflow: hidden; */
         font-family: 'Open Sauce Sans', sans-serif;
     }
@@ -25,15 +25,17 @@
     }
     .sticker{
         position: absolute;
-        bottom: 553px;
-        left: 42px;
+        /* bottom: 553px;
+        left: 42px; */
+        left: 2%;
+        top: 5.5%;
         z-index: 1;
         transform: translateX(-10px);
     }
     .decorationFond{
-        position: absolute;
-        /* top: calc(100% - 500px); */
-        top: 35%;
+        /* position: absolute; */
+        /* bottom: 10%; */
+        margin-top: 15%;
         width: 100%;
         max-width: none;
         z-index: -1;
@@ -41,7 +43,8 @@
     .demarrer{
         position: absolute;
         left: 50%;
-        top: 88%;
-        transform: translate(-50%, -50%);
+        /* bottom: 180%; */
+        transform: translate(-50%, 660%);
+        z-index: 1;
     }
 }
