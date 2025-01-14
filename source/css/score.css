@@ -10,6 +10,7 @@
         background-image: url(../images/etoilesFondOrange.png);
     }
     .etoile{
+        position: relative;
         width: 100.9px;
         height: 88.288px;
         margin-top: 10vh;
@@ -30,8 +31,12 @@
         font-weight: 900;
         text-align: center;
         line-height: 124.009%;
-        top: 17vh;
-       -webkit-text-stroke: 1px #494748;
+        /* top: 17vh; */
+        -webkit-text-stroke: 1px #494748;
+        top: 17%;
+        /* top: 50%; 
+        left: 50%;  */
+        /* transform: translate(-50%, -50%); */
     }
     .scorePartieBouton p{
         font-size: 1.2rem;
