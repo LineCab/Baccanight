@@ -23,9 +23,47 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 90vh;
+        height: 93vh;
     }
     .presentation1Texte{
         width: 320px;
+    }
+
+    .niveauDiv{
+        width: 254px;
+        height: 43px;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+    }
+    .niveau3{
+        background: #FFE872;
+    }
+    .niveau2{
+        background: #FEEB8D;
+    }
+    .niveau1{
+        background: #FFF4B9;
+    }
+    .texteNiveau{
+        font-weight: 700;
+    }
+    .divNiveau{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 23vh;
+    }
+    .grosseDivNiveau{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-evenly; */
+        gap: 3vh;
+        height: 60vh;
+        /* background-color: #FEDF41; */
     }
 }
