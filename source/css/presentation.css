@@ -1,0 +1,17 @@
+span{
+    font-weight: 900;
+    color: #FEDF41;
+}
+img{
+    width: 83.739px;
+    height: 80.39px;
+    flex-shrink: 0;
+}
+.presentationDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.presentation1Texte{
+    width: 320px;
+}
