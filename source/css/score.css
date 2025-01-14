@@ -1,0 +1,55 @@
+@media only screen and (max-width: 450px){
+    body{
+        height: 100vh;
+        padding: 20px 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--orange);
+        background-image: url(../images/etoilesFondOrange.png);
+    }
+    .etoile{
+        width: 100.9px;
+        height: 88.288px;
+        margin-top: 10vh;
+    }
+    .scoreAnimal{
+        gap: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .scoreAnimal img{
+        position: relative;
+    }
+    .scoreAnimal p{
+        position: absolute;
+        color: #FFF;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+        line-height: 124.009%;
+        top: 17vh;
+       -webkit-text-stroke: 1px #494748;
+    }
+    .scorePartieBouton p{
+        font-size: 1.2rem;
+        color: #FFF;
+        text-align: center;
+    }
+    .scorePartieBouton{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    .scorePartieBouton img{
+        position: absolute;
+        width: 66px;
+        height: 46.795px;
+        top: 6vh;
+        left: 60vw;
+    }
+}
