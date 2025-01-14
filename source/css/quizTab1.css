@@ -1,22 +1,25 @@
 
 @media only screen and (max-width: 450px){
     body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0 4rem;
     }
     
     .contenuQuiz{
         display: flex;
-        width: fit-content;
+        width: 85vw;
         flex-direction: column;
         align-items: center;
-        gap: 4rem;
+        gap: 10vh;
     }
 
     .enTeteQuiz{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 2vh;
         align-self: stretch;
     }
 
@@ -24,17 +27,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2.5rem;
+        gap: 6vh;
+        align-self: stretch;
+    }
+
+    .inputCode{
+        display: flex;
+        flex-direction: column;
         align-self: stretch;
     }
 
     #codeInput{
         display: flex;
-        padding: 0.625rem;
+        height: 45px;
+        padding: 10px;
         align-items: center;
         align-self: stretch;
-        border-radius: 0.625rem;
+        border-radius: 10px;
         border: 1px solid #D6D6D6;
+    }
+
+    .stickersInput{
+        width: 110px;
+        height: 78px;
+        position: absolute;
+        left: 70vw;
+        top: 15vh;
     }
 
     .btnValider{
