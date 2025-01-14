@@ -16,28 +16,31 @@
         margin-top: 10vh;
     }
     .scoreAnimal{
-        gap: 5vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 5vh;
     }
-    .scoreAnimal img{
+
+    .etoileScore{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
         position: relative;
     }
-    .scoreAnimal p{
+
+    .etoileScore p{
         position: absolute;
-        color: #FFF;
-        font-size: 1.6rem;
-        font-weight: 900;
+        right: 28.949px;
+        bottom: 29.325px;
+        color: var(--blanc);
         text-align: center;
-        line-height: 124.009%;
-        /* top: 17vh; */
-        -webkit-text-stroke: 1px #494748;
-        top: 17%;
-        /* top: 50%; 
-        left: 50%;  */
-        /* transform: translate(-50%, -50%); */
+        -webkit-text-stroke: 0.8px var(--noir);
+        font-size: 23.229px;
+        font-weight: 900;
+        z-index: 9;
     }
+
     .scorePartieBouton p{
         font-size: 1.2rem;
         color: #FFF;
