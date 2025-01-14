@@ -1,17 +1,31 @@
-span{
-    font-weight: 900;
-    color: #FEDF41;
-}
-img{
-    width: 83.739px;
-    height: 80.39px;
-    flex-shrink: 0;
-}
-.presentationDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.presentation1Texte{
-    width: 320px;
+@media only screen and (max-width: 450px){
+    body{
+        height: 100vh;
+        padding: 20px 55px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; */
+        background: var(--orange);
+        background-image: url(../images/etoilesFondOrange.png);
+    }
+    span{
+        font-weight: 900;
+        color: #FEDF41;
+    }
+    img{
+        width: 83.739px;
+        height: 80.39px;
+        flex-shrink: 0;
+    }
+    .presentationDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 90vh;
+    }
+    .presentation1Texte{
+        width: 320px;
+    }
 }
