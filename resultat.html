@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BienVu</title>
+        <link href="https://befonts.com/open-sauce-font-family.html" rel="stylesheet">
+        <link rel="stylesheet" href="source/css/reset.css">
+        <link rel="stylesheet" href="source/css/style.css">
+        <link rel="stylesheet" href="source/css/score.css">
+    </head>
+    <body>
+        
+        <div class="scoreAnimal">
+            <div class="etoileScore">
+                <img src="source/images/etoileJaune.svg" alt="etoile jaune qui contient le score" class="etoile">
+                <p><span id="nbPointDisplay"></span>/9</p>
+            </div>
+            <h2>Tu as la même vue qu'<span id="nomAnimal">taupe</span></h2>
+            <img id="imageAnimal" src="source/images/taupe.svg" alt="emoji d'une taupe">
+        </div>        
+        <div class="scorePartieBouton">
+            <p id="phraseClash">Aïe, aïe, aïe... C’était pas ton jour !</p>
+            <button class="btn jaune">Revenir à l'accueil</button>
+            <img src="source/images/stickersInput.png" alt="stickers">
+        </div>
+
+    </body>
+
+    <script>
+        let compteurPoints = localStorage.getItem("compteurPoints")
+            ? parseInt(localStorage.getItem("compteurPoints"), 10)
+            : 0;
+
+        document.getElementById("nbPointDisplay").textContent = compteurPoints;
+
+        let rangeGroup = null;
+
+        if (compteurPoints >= 0 && compteurPoints <= 3) {
+            rangeGroup = '0-3';
+        } else if (compteurPoints >= 4 && compteurPoints <= 5) {
+            rangeGroup = '4-5';
+        } else if (compteurPoints >= 6 && compteurPoints <= 7) {
+            rangeGroup = '6-7';
+        } else if (compteurPoints === 8) {
+            rangeGroup = '8';
+        } else if (compteurPoints === 9) {
+            rangeGroup = '9';
+        } else {
+            rangeGroup = 'other';
+        }
+
+        switch (rangeGroup) {
+            case '0-3':
+
+                document.getElementById("nomAnimal").textContent = "une taupe";
+                document.getElementById("imageAnimal").src = "source/images/taupe.svg";
+                document.getElementById("imageAnimal").alt = "emoji d'une taupe";
+                document.getElementById("phraseClash").textContent = "Aïe, aïe, aïe... C’était pas ton jour !";
+                break;
+
+            case '4-5':
+
+                document.getElementById("nomAnimal").textContent = "un rat";
+                document.getElementById("imageAnimal").src = "source/images/rat.png";
+                document.getElementById("imageAnimal").alt = "emoji d'un rat";
+                document.getElementById("phraseClash").textContent = "On ne peut pas être bon partout !";
+                break;
+
+            case '6-7':
+
+                document.getElementById("nomAnimal").textContent = "un chien";
+                document.getElementById("imageAnimal").src = "source/images/chien.png";
+                document.getElementById("imageAnimal").alt = "emoji d'un chien";
+                document.getElementById("phraseClash").textContent = "Pas si mal, c'est déjà très bien !";
+                break;
+
+            case '8':
+
+                document.getElementById("nomAnimal").textContent = "un loup";
+                document.getElementById("imageAnimal").src = "source/images/loup.png";
+                document.getElementById("imageAnimal").alt = "emoji d'un loup";
+                document.getElementById("phraseClash").textContent = "Félicitation, tu es un.e expert.e du détail !";
+                break;
+
+            case '9':
+
+                document.getElementById("nomAnimal").textContent = "un faucon";
+                document.getElementById("imageAnimal").src = "source/images/faucon.png";
+                document.getElementById("imageAnimal").alt = "emoji d'un faucon";
+                document.getElementById("phraseClash").textContent = "Bravo ! tu as un oeil de faucon";
+                break;
+                
+            default:
+                
+                break;
+        }
+
+    </script>
+</html>
