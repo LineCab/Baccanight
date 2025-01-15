@@ -4,7 +4,7 @@
         z-index: -1;
         height: 100vh;
         width: 100vw;
-        overflow-x: hidden;
+        overflow: hidden;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -17,7 +17,11 @@
         position: absolute;
         z-index: -99;
         top: 35%;
+        width: 100vw;
         transition: transform 1s ease-out;
+    }
+    #decorationFondPetit{
+        display: none;
     }
     
     #decorationFond.moveAnimation {
@@ -57,42 +61,32 @@
         bottom: -32%;
     }
 
+}
 
-
-
-/*     
+@media only screen and (max-width: 350px){
     .titre{
-        color: var(--gris);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 10%;
-    }
-    .bienvenue{
-        font-size: 1.563rem;
-        font-weight: 600;
-    }
-    .logoPartie2{
-        color : var(--orange);
+        margin-top: 2vh;
     }
     .sticker{
-        position: absolute;
-        left: 2%;
-        top: 5.5%;
-        z-index: 1;
-        transform: translateX(-10px);
+        width: 55px;
+        left: -9%;
+        bottom: -20%;
     }
-    .decorationFond{
-        margin-top: 15%;
-        width: 100%;
-        max-width: none;
-        z-index: -1;
+    #decorationFond{
+        display: none;
     }
-    .demarrer{
+    #decorationFondPetit{
+        display: block;
+        width: 100vw;
+    }
+    #decorationFondPetit{
         position: absolute;
-        left: 50%;
-        top: 10%;
-        transform: translate(-50%, 660%);
-        z-index: 1;
-    } */
+        z-index: -99;
+        top: 40%;
+        transition: transform 1s ease-out;
+    }
+    #decorationFondPetit.moveAnimation {
+        z-index: 99;
+        transform: translate(0, -50%);
+    }
 }
