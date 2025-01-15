@@ -1,6 +1,7 @@
 
 @media only screen and (max-width: 450px){
     body{
+        height: 97vh;
         display: flex;
         flex-direction: column;
         align-items: center;

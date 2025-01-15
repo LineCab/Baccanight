@@ -13,7 +13,7 @@
     <div class="compteurPoints">
         <p><span class="point">Points</span></p>
         <img src="source/images/lignePoint.svg" alt="barre de séparation">
-        <p><span class="nbPoint">0</span></p>
+        <p><span class="nbPoint" id="nbPointDisplay">0</span></p>
     </div>
     <div class="imageIndice">
         <img class="ellipseBlanche" src="source/images/ellipseBlanche.png" alt="ellipse blanche de décoration">
@@ -39,20 +39,12 @@
     </div>
 
     <script>
-        const validCode = 48;
+        let compteurPoints = localStorage.getItem("compteurPoints")
+            ? parseInt(localStorage.getItem("compteurPoints"), 10)
+            : 0;
 
-        document.getElementById("checkCodeButton").addEventListener("click", function () {
-            const userCode = parseInt(document.getElementById("codeInput").value, 10);
+        document.getElementById("nbPointDisplay").textContent = compteurPoints;
 
-            const messageElement = document.getElementById("message");
-
-            if (userCode === validCode) {
-                window.location.href = "success.html";
-            } else {
-                window.location.href = "fail.html";
-            }
-        });
-        
         let niveau = 3;
 
         document.getElementById("btnZoom").addEventListener("click", function () {
@@ -82,6 +74,29 @@
                 niveau1.classList.remove("selected");
                 niveau2.classList.add("selected");
                 niveau3.classList.remove("selected");
+            }
+        });
+
+        const validCode = 48;
+
+        document.getElementById("checkCodeButton").addEventListener("click", function () {
+            const userCode = parseInt(document.getElementById("codeInput").value, 10);
+
+            if (userCode === validCode) {
+                if (niveau === 3) {
+                    compteurPoints += 3;
+                } else if (niveau === 2) {
+                    compteurPoints += 2;
+                } else if (niveau === 1) {
+                    compteurPoints += 1;
+                }
+
+                document.getElementById("nbPointDisplay").textContent = compteurPoints;
+                localStorage.setItem("compteurPoints", compteurPoints);
+
+                window.location.href = "success.html";
+            } else {
+                window.location.href = "fail.html";
             }
         });
 
