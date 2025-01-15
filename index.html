@@ -12,17 +12,26 @@
     <body>
         
         <div class="titre">
-            <p class="bienvenue">Bienvenue sur</p>
-            <h1>Bien<span class="logoPartie2">Vu</span></h1>
+            <p>Bienvenue sur</p>
+            <h1>Bien<span class="titreOrange">Vu</span></h1>
+            <img src="source/images/stiker.svg" alt="sticker" class="sticker">
         </div>
-        <img src="source/images/stiker.svg" alt="sticker" class="sticker">
 
-        <div class="demarrer">
-            <a href="presentation1.html">
-                <button class="btn jaune"><b>Démarrer</b></button>
-            </a>
-        </div>
-        <img src="source/images/fond_homepage.svg" alt="décoration fond" class="decorationFond">
+        <button id="btnDemarrer" class="btn jaune"><b>Démarrer</b></button>
+        <img id="decorationFond" src="source/images/fond_homepage.svg" alt="décoration fond">
 
     </body>
+
+    <script>
+        document.getElementById("btnDemarrer").addEventListener("click", function () {
+            const decorationFond = document.getElementById("decorationFond");
+            
+            decorationFond.classList.add("moveAnimation");
+
+            decorationFond.addEventListener("transitionend", function () {
+                window.location.href = "presentation1.html";
+            });
+        });
+
+    </script>
 </html>
