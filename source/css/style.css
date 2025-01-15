@@ -28,6 +28,7 @@
         font-size: 2rem;
         font-weight: 900;
         color: var(--blanc);
+        padding: 0px 6%;
     }
 
     h3{
@@ -61,4 +62,27 @@
         background-color: var(--orange);
     }
 
+}
+
+@media only screen and (max-width: 350px) {
+    
+
+    h1{
+        font-size: 5rem;
+        font-weight: 900;
+        position: relative;
+    }
+    
+    h2{
+        font-size: 1.3rem;
+        padding: 0px 5%;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 1.1rem;
+        height: 45px;
+    }
 }

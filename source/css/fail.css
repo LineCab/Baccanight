@@ -16,10 +16,10 @@
     }
     .baseLine{
         color: #FCFCFC;
-        font-size: 22px;
+        font-size: 1.2rem;
         text-align: center;
         width: 277px;
-        font-weight: 600;
+        /* font-weight: 600; */
     }
     .failDiv{
         display: flex;
@@ -29,8 +29,8 @@
         height: 95vh;
     }
     .failReponse{
-        width: 320px;
-        width: 150%;
+        text-align: center;
+        width: 130%;
     }
     .reponseFailDiv{
         display: flex;

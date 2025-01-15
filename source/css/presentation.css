@@ -1,7 +1,7 @@
 @media only screen and (max-width: 450px){
     body{
         height: 100vh;
-        padding: 20px 55px;
+        padding: 20px 0px;
         /* display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -27,7 +27,7 @@
         height: 93vh;
     }
     .presentation1Texte{
-        width: 320px;
+        width: 97%;
     }
 
     .niveauDiv{
@@ -74,7 +74,7 @@
         /* margin: 0px 5px; */
     }
     .presentation3Texte{
-        width: 320px;
+        width: 97%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -92,6 +92,17 @@
         color: #FCFCFC;
         text-align: center;
         font-size: 1.1rem;
+        width: 95vw;
     }
     
+}
+
+@media only screen and (max-width: 350px){
+    .divNiveau{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 32vh;
+    }
 }
