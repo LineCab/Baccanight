@@ -15,8 +15,19 @@
         <h2>Bien <span style="color: var(--jaune)">Vu !</span></h2>
         <p>Ce détail appartient bien à ce tableau</p>
     </div>
+    <div class="comptePoints">
+        <p>Tu as : <span class="nbPoint" id="nbPointDisplay">0</span> points</p>
+    </div>
     <div class="zoneContinuer">
         <p>Continue pour le prochain mystère !</p>
         <button id="btnContinuer" class="btn jaune">Continuer</button>
     </div>
+
+    <script>
+        let compteurPoints = localStorage.getItem("compteurPoints")
+            ? parseInt(localStorage.getItem("compteurPoints"), 10)
+            : 0;
+
+        document.getElementById("nbPointDisplay").textContent = compteurPoints;
+    </script>
 </body>
