@@ -41,7 +41,7 @@
 
     <script>
 
-        localStorage.setItem("numéroTableau", 2);
+        localStorage.setItem("numéroTableau", 3);
 
 
         let compteurPoints = localStorage.getItem("compteurPoints")
@@ -84,7 +84,7 @@
         });
 
 
-        const validCode = 96;
+        const validCode = 83;
 
         document.getElementById("checkCodeButton").addEventListener("click", function () {
             const userCode = parseInt(document.getElementById("codeInput").value, 10);
@@ -101,7 +101,7 @@
                 document.getElementById("nbPointDisplay").textContent = compteurPoints;
                 localStorage.setItem("compteurPoints", compteurPoints);
                 
-                localStorage.setItem("numéroTableau", 3);
+                localStorage.setItem("numéroTableau", 4);
 
                 window.location.href = "success.html";
             } else {
