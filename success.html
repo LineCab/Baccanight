@@ -30,11 +30,19 @@
 
         document.getElementById("nbPointDisplay").textContent = compteurPoints;
 
+        const numeroTableau = parseInt(localStorage.getItem("numéroTableau"), 10);
+        if (numeroTableau === 4) {
+            document.getElementById("btnContinuer").textContent = "Terminer";
 
-        document.getElementById("btnContinuer").addEventListener("click", function () {
-            const numeroTableau = localStorage.getItem("numéroTableau");
+            document.getElementById("btnContinuer").addEventListener("click", function () {
+                window.location.href = "resultat.html";
+            });
+        }else{
+            document.getElementById("btnContinuer").addEventListener("click", function () {
+                const numeroTableau = localStorage.getItem("numéroTableau");
 
-            window.location.href = `quizTab${numeroTableau}.html`;
-        });
+                window.location.href = `quizTab${numeroTableau}.html`;
+            });
+        }
     </script>
 </body>
