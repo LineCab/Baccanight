@@ -7,7 +7,8 @@
     <link href="https://befonts.com/open-sauce-font-family.html" rel="stylesheet">
     <link rel="stylesheet" href="source/css/reset.css">
     <link rel="stylesheet" href="source/css/style.css">
-    <link rel="stylesheet" href="source/css/quizTab1.css">
+    <link rel="stylesheet" href="source/css/quiz.css">
+    <link rel="stylesheet" href="source/css/tab1.css">
 </head>
 <body>
     <div class="compteurPoints">
@@ -39,16 +40,21 @@
     </div>
 
     <script>
+
+        localStorage.setItem("numéroTableau", 1);
+
+
         let compteurPoints = localStorage.getItem("compteurPoints")
             ? parseInt(localStorage.getItem("compteurPoints"), 10)
             : 0;
 
         document.getElementById("nbPointDisplay").textContent = compteurPoints;
 
+
         let niveau = 3;
 
         document.getElementById("btnZoom").addEventListener("click", function () {
-
+            
             const imageElement = document.querySelector(".imageIndice");
 
             if (niveau == 3){
@@ -77,6 +83,33 @@
             }
         });
 
+
+        let essai = localStorage.getItem("essai");
+
+        if (essai === "true") {
+            const imageElement = document.querySelector(".imageIndice");
+
+            if (imageElement) {
+                imageElement.style.backgroundSize = "160%";
+                imageElement.style.backgroundPosition = "50% 30%";
+
+                const niveau1 = document.getElementById("niv1");
+                const niveau2 = document.getElementById("niv2");
+                const niveau3 = document.getElementById("niv3");
+
+                niveau1.classList.add("selected");
+                niveau2.classList.remove("selected");
+                niveau3.classList.remove("selected");
+
+                niveau = 1;
+            } else {
+                console.error("L'élément imageIndice n'a pas été trouvé.");
+            }
+
+            localStorage.removeItem("essai");
+        }
+
+
         const validCode = 48;
 
         document.getElementById("checkCodeButton").addEventListener("click", function () {
@@ -93,6 +126,8 @@
 
                 document.getElementById("nbPointDisplay").textContent = compteurPoints;
                 localStorage.setItem("compteurPoints", compteurPoints);
+                
+                localStorage.setItem("numéroTableau", 2);
 
                 window.location.href = "success.html";
             } else {

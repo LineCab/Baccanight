@@ -29,5 +29,12 @@
             : 0;
 
         document.getElementById("nbPointDisplay").textContent = compteurPoints;
+
+
+        document.getElementById("btnContinuer").addEventListener("click", function () {
+            const numeroTableau = localStorage.getItem("numéroTableau");
+
+            window.location.href = `quizTab${numeroTableau}.html`;
+        });
     </script>
 </body>

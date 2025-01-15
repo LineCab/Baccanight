@@ -14,12 +14,52 @@
             <img src="source/images/jauneInterrogation.svg" alt="sticker jaune avec un point d'interrogation">
             <div class="reponseFailDiv">
                 <h2 class="failReponse">Mauvaise réponse...</h2>
-                <p class="baseLine">Ce n’est pas le bon tableau :(</p>
+                <p class="baseLine">Ce n’est pas le bon tableau </p>
             </div>
-            <a href="*">
-                <button class="btn jaune">Suivant</button>
-            </a>
-        </div>
+            <button id="btnRetenter" class="btn jaune">Ressayer</button>
+            <button id="btnSuivant" class="btn jaune">Suivant</button>
+        </div>""
 
+        <script>
+            let compteurPoints = localStorage.getItem("compteurPoints")
+                ? parseInt(localStorage.getItem("compteurPoints"), 10)
+                : 0;
+
+            const nbPointDisplay = document.getElementById("nbPointDisplay");
+            if (nbPointDisplay) {
+                nbPointDisplay.textContent = compteurPoints;
+            } else {
+                console.warn("L'élément nbPointDisplay est introuvable.");
+            }
+
+            // Gestion du bouton Ressayer
+            document.getElementById("btnRetenter").addEventListener("click", function () {
+
+                const numeroTableau = localStorage.getItem("numéroTableau");
+                localStorage.setItem("essai", "true");
+
+                if (numeroTableau) {
+
+                    window.location.href = `quizTab${numeroTableau}.html`;
+                } else {
+                    console.error("numéroTableau introuvable dans localStorage.");
+                }
+            });
+
+            // Gestion du bouton Suivant
+            document.getElementById("btnSuivant").addEventListener("click", function () {
+                let numeroTableau = parseInt(localStorage.getItem("numéroTableau"), 10);
+
+                if (!isNaN(numeroTableau)) {
+                    numeroTableau += 1;
+                    
+                    localStorage.setItem("numéroTableau", numeroTableau);
+
+                    window.location.href = `quizTab${numeroTableau}.html`;
+                } else {
+                    console.error("La valeur de numéro Tableau est invalide ou introuvable.");
+                }
+            });
+        </script>
     </body>
 </html>

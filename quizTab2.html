@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BienVu</title>
+    <link href="https://befonts.com/open-sauce-font-family.html" rel="stylesheet">
+    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/quiz.css">
+    <link rel="stylesheet" href="source/css/tab2.css">
+</head>
+<body>
+    <div class="compteurPoints">
+        <p><span class="point">Points</span></p>
+        <img src="source/images/lignePoint.svg" alt="barre de séparation">
+        <p><span class="nbPoint" id="nbPointDisplay">0</span></p>
+    </div>
+    <div class="imageIndice">
+        <img class="ellipseBlanche" src="source/images/ellipseBlanche.png" alt="ellipse blanche de décoration">
+        <button class="front" id="btnZoom"><img src="source/images/plusOrange.svg" width="50vw"></button>
+        <ul class="listeNiveau front">
+            <li><span id="niv1">1</span></li>
+            <li><span id="niv2">2</span></li>
+            <li><span id="niv3" class="selected">3</span></li>
+        </ul>
+    </div>
+    <div class="contenuQuiz">
+        <div class="enTeteQuiz">
+            <h3>Quel est le tableau correspondant ?</h3>
+            <p>Inscris son code ci-dessous</p>
+        </div>
+        <div class="zoneCode">
+            <div class="inputCode">
+                <input type="number" id="codeInput" placeholder="Code du tableau">
+                <img class="stickersInput" src="/source/images/stickersInput.png" alt="stickers décoratifs">
+            </div>
+            <button id="checkCodeButton" class="btn orange">Valider</button>
+        </div>
+    </div>
+
+    <script>
+
+        localStorage.setItem("numéroTableau", 2);
+
+
+        let compteurPoints = localStorage.getItem("compteurPoints")
+            ? parseInt(localStorage.getItem("compteurPoints"), 10)
+            : 0;
+
+        document.getElementById("nbPointDisplay").textContent = compteurPoints;
+
+
+        let niveau = 3;
+
+        document.getElementById("btnZoom").addEventListener("click", function () {
+
+            const imageElement = document.querySelector(".imageIndice");
+
+            if (niveau == 3){
+                imageElement.style.backgroundSize = "400%";
+                imageElement.style.backgroundPosition = "52% 29%";
+                niveau = niveau - 1;
+            }else if(niveau == 2){
+                imageElement.style.backgroundSize = "160%";
+                imageElement.style.backgroundPosition = "50% 30%";
+                niveau = niveau - 1;
+            }
+
+            const niveau1 = document.getElementById("niv1");
+            const niveau2 = document.getElementById("niv2");
+            const niveau3 = document.getElementById("niv3");
+
+            if (niveau === 1) {
+                btnZoom.classList.add("disabled");
+                niveau1.classList.add("selected");
+                niveau2.classList.remove("selected");
+                niveau3.classList.remove("selected");
+            } else if (niveau === 2) {
+                niveau1.classList.remove("selected");
+                niveau2.classList.add("selected");
+                niveau3.classList.remove("selected");
+            }
+        });
+
+
+        const validCode = 48;
+
+        document.getElementById("checkCodeButton").addEventListener("click", function () {
+            const userCode = parseInt(document.getElementById("codeInput").value, 10);
+
+            if (userCode === validCode) {
+                if (niveau === 3) {
+                    compteurPoints += 3;
+                } else if (niveau === 2) {
+                    compteurPoints += 2;
+                } else if (niveau === 1) {
+                    compteurPoints += 1;
+                }
+
+                document.getElementById("nbPointDisplay").textContent = compteurPoints;
+                localStorage.setItem("compteurPoints", compteurPoints);
+
+                window.location.href = "success.html";
+            } else {
+                window.location.href = "fail.html";
+            }
+        });
+
+    </script>
+</body>
+</html>
