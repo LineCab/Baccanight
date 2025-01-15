@@ -1,0 +1,41 @@
+@media only screen and (max-width: 450px){
+    body{
+        height: 100vh;
+        padding: 20px 55px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; */
+        background: var(--orange);
+        background-image: url(../images/etoilesFondOrange.png);
+    }
+    img{
+        width: 83.739px;
+        height: 80.39px;
+        flex-shrink: 0;
+    }
+    .baseLine{
+        color: #FCFCFC;
+        font-size: 22px;
+        text-align: center;
+        width: 277px;
+        font-weight: 600;
+    }
+    .failDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 95vh;
+    }
+    .failReponse{
+        width: 320px;
+        width: 150%;
+    }
+    .reponseFailDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        align-items: center;
+    }
+}
