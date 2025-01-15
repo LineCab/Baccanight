@@ -1,11 +1,5 @@
 @media only screen and (max-width: 450px){
     body{
-        height: 100vh;
-        padding: 20px 55px;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center; */
         background: var(--orange);
         background-image: url(../images/etoilesFondOrange.png);
     }
@@ -27,6 +21,7 @@
         justify-content: space-between;
         align-items: center;
         height: 95vh;
+        width: 100vw;
     }
     .failReponse{
         text-align: center;
@@ -37,5 +32,17 @@
         flex-direction: column;
         gap: 1vh;
         align-items: center;
+    }
+    .divBouton{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .btnSuivant{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #FCFCFC;
+        text-decoration-line: underline;
     }
 }
