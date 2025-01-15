@@ -12,8 +12,9 @@
         align-items: center;
         gap: 6px;
         border-radius: 10px;
-        background: url(../images/detailsSang.jpg) lightgray 50% / 900% no-repeat;
-        background-position: 42% 32%;
+        background: url(../images/detailsSang.jpg) lightgray 50% / 200% no-repeat;
+        background-position: 40% 50%;
+
         transition: background-size 1s ease, background-position 1s ease;
     }
     
