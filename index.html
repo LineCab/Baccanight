@@ -19,18 +19,27 @@
 
         <button id="btnDemarrer" class="btn jaune"><b>Démarrer</b></button>
         <img id="decorationFond" src="source/images/fond_homepage.svg" alt="décoration fond">
+        <img id="decorationFondPetit" src="source/images/fond_homepage_petit.svg" alt="décoration fond">
 
     </body>
 
     <script>
         document.getElementById("btnDemarrer").addEventListener("click", function () {
             const decorationFond = document.getElementById("decorationFond");
+            const decorationFondPetit = document.getElementById("decorationFondPetit");
+            const imageActive = window.innerWidth <= 350 ? decorationFondPetit : decorationFond;
             
             decorationFond.classList.add("moveAnimation");
+            imageActive.classList.add("moveAnimation");
+            
 
             decorationFond.addEventListener("transitionend", function () {
                 window.location.href = "presentation1.html";
             });
+            imageActive.addEventListener("transitionend", function () {
+            window.location.href = "presentation1.html";
+            });
+   
         });
 
         localStorage.setItem("compteurPoints", 0);
