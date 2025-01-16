@@ -2,8 +2,8 @@
 @media only screen and (max-width: 450px){
 
     .imageIndice{
-        background: url(../images/visageHomme.jpg) lightgray 50% / 900% no-repeat;
-        background-position: 42% 32%;
+        background: url(../images/regard.jpeg) lightgray 50% / 450% no-repeat;
+        background-position: 28% 51%;
         transition: background-size 1s ease, background-position 1s ease;
     }
     
