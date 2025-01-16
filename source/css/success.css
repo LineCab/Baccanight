@@ -1,6 +1,6 @@
 @media only screen and (max-width: 450px)  {
     body{
-        height: 100vh;
+        height: 84vh;
         padding: 20px 55px;
         display: flex;
         flex-direction: column;
@@ -45,5 +45,20 @@
         background: #FEDF41;
         color: var(--noir);
         font-weight: 800;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    body{
+        height: 95vh;
+    }
+    .zoneContinuer p{
+        width: 90vw;
+    }
+    .contenuSucess p{
+        width: 90vw;
+    }
+    .comptePoints{
+        width: 90vw;
     }
 }
