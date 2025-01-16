@@ -62,6 +62,9 @@
         color: var(--blanc);
         background-color: var(--orange);
     }
+    input {
+        font-size: 1.1rem;
+    }
 
 }
 
