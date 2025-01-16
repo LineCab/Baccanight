@@ -30,17 +30,16 @@
     .etoileScore{
         display: inline-flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         position: relative;
     }
 
     .etoileScore p{
         position: absolute;
-        right: 31.949px;
-        bottom: 29.325px;
-        color: var(--blanc);
+        right: 30px;
+        bottom: 30px;
+        color: var(--gris);
         text-align: center;
-        -webkit-text-stroke: 0.8px var(--noir);
         font-size: 23.229px;
         font-weight: 900;
         z-index: 9;
