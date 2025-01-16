@@ -78,6 +78,17 @@
         gap: 0px 7px;
     }
 
+    .btnZoom{
+        display: inline-flex;
+        padding: 10px 24px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        border: 1px solid var(--blanc);
+        color: var(--blanc);
+        font-size: 18px;
+    }
+
     .divAttention{
         display: flex;
         flex-direction: column;

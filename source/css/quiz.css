@@ -40,7 +40,7 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        gap: 6px;
+        gap: 2vh;
         border-radius: 10px;
     }
 
@@ -58,6 +58,7 @@
         border: 1px solid var(--orange);
         background: var(--blanc);
         color: var(--orange);
+        font-size: 18px;
         font-weight: 800;
     }
 
