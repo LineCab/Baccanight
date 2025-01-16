@@ -2,7 +2,7 @@
     body {
         background-image:url(../images/fond_page_accueil.png);
         z-index: -1;
-        height:95vh;
+        height:92vh;
         width: 100vw;
         overflow: hidden;
         position: relative;
