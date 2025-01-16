@@ -2,19 +2,8 @@
 @media only screen and (max-width: 450px){
 
     .imageIndice{
-        position: relative;
-        display: flex;
-        width: 90vw;
-        height:55vh;
-        padding: 4px 0px;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 6px;
-        border-radius: 10px;
         background: url(../images/detailsSang.jpg) lightgray 50% / 200% no-repeat;
         background-position: 40% 50%;
-
         transition: background-size 1s ease, background-position 1s ease;
     }
     
