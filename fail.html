@@ -34,6 +34,7 @@
                 console.warn("L'élément nbPointDisplay est introuvable.");
             }
 
+
             // Gestion du bouton Ressayer
             document.getElementById("btnRetenter").addEventListener("click", function () {
 
@@ -48,18 +49,26 @@
                 }
             });
 
+
             // Gestion du bouton Suivant
+
+            let numeroTableau = parseInt(localStorage.getItem("numéroTableau"), 10);
+
+            if (!isNaN(numeroTableau)) {
+                if (numeroTableau === 3) {
+                    document.getElementById("btnSuivant").textContent = "Terminer";
+                }
+            } else {
+                console.error("La valeur de numéro Tableau est invalide ou introuvable.");
+            }
+
             document.getElementById("btnSuivant").addEventListener("click", function () {
-                let numeroTableau = parseInt(localStorage.getItem("numéroTableau"), 10);
-
-                if (!isNaN(numeroTableau)) {
+                if (numeroTableau === 3) {
+                    window.location.href = `resultat.html`;
+                }else{
                     numeroTableau += 1;
-                    
                     localStorage.setItem("numéroTableau", numeroTableau);
-
                     window.location.href = `quizTab${numeroTableau}.html`;
-                } else {
-                    console.error("La valeur de numéro Tableau est invalide ou introuvable.");
                 }
             });
         </script>
