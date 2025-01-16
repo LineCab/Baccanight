@@ -83,6 +83,30 @@
             }
         });
 
+        let essai = localStorage.getItem("essai");
+
+        if (essai === "true") {
+            const imageElement = document.querySelector(".imageIndice");
+
+            if (imageElement) {
+                imageElement.style.backgroundSize = "100%";
+                imageElement.style.backgroundPosition = "40% 30%";
+
+                const niveau1 = document.getElementById("niv1");
+                const niveau2 = document.getElementById("niv2");
+                const niveau3 = document.getElementById("niv3");
+
+                niveau1.classList.add("selected");
+                niveau2.classList.remove("selected");
+                niveau3.classList.remove("selected");
+
+                niveau = 1;
+            } else {
+                console.error("L'élément imageIndice n'a pas été trouvé.");
+            }
+
+            localStorage.removeItem("essai");
+        }
 
         const validCode = 83;
 
