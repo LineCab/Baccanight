@@ -1,6 +1,6 @@
 @media only screen and (max-width: 450px){
     body{
-        height: 100vh;
+        height: 84vh;
         padding: 20px 55px;
         display: flex;
         flex-direction: column;
@@ -9,11 +9,16 @@
         background: var(--orange);
         background-image: url(../images/etoilesFondOrange.png);
     }
+    .scoreAnimal h2{
+        font-size: 1.4rem;
+        font-weight: 700;
+        width: 90vw;
+    }
     .etoile{
         position: relative;
         width: 100.9px;
         height: 88.288px;
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
     .scoreAnimal{
         display: flex;
@@ -55,16 +60,23 @@
     }
     .scorePartieBouton img{
         position: absolute;
-        width: 66px;
+        width: 60px;
         height: 46.795px;
-        top: 6vh;
-        left: 60vw;
+        top: 8vh;
+        left: 69vw;
+    }
+    #imageAnimal{
+        width: 140px;
+    }
+    #phraseClash{
+        width: 90vw;
+        margin-top: 5vh;
     }
 }
 
-@media only screen and (max-width: 450px){
-    .imgAnimal{
-        width: 80px;
+@media only screen and (max-width: 350px){
+    #imageAnimal{
+        width: 100px;
     }
     #phraseClash{
         font-size: 1rem;
