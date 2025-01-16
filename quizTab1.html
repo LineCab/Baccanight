@@ -118,10 +118,13 @@
             if (userCode === validCode) {
                 if (niveau === 3) {
                     compteurPoints += 3;
+                    localStorage.setItem("pointsGagnes", 3);
                 } else if (niveau === 2) {
                     compteurPoints += 2;
+                    localStorage.setItem("pointsGagnes", 2);
                 } else if (niveau === 1) {
                     compteurPoints += 1;
+                    localStorage.setItem("pointsGagnes", 1);
                 }
 
                 document.getElementById("nbPointDisplay").textContent = compteurPoints;
