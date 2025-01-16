@@ -20,12 +20,12 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 95vh;
+        height: 85vh;
         width: 100vw;
     }
     .failReponse{
         text-align: center;
-        width: 130%;
+        width: max-content;
     }
     .reponseFailDiv{
         display: flex;
