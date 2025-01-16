@@ -17,13 +17,9 @@
         <p><span class="nbPoint" id="nbPointDisplay">0</span></p>
     </div>
     <div class="imageIndice">
-        <img class="ellipseBlanche" src="source/images/ellipseBlanche.png" alt="ellipse blanche de décoration">
-        <button class="front" id="btnZoom"><img src="source/images/plusOrange.svg" width="50vw"></button>
-        <ul class="listeNiveau front">
-            <li><span id="niv1">1</span></li>
-            <li><span id="niv2">2</span></li>
-            <li><span id="niv3" class="selected">3</span></li>
-        </ul>
+        <img src="source/images/ellipseBlanche.png" alt="ellipse blanche de décoration">
+        <button class="front" id="btnZoom">Dézoomer</button>
+        <p>Tu joues pour <span class="black"><span id="pointJoues">3</span> points</span></p>
     </div>
     <div class="contenuQuiz">
         <div class="enTeteQuiz">
@@ -64,19 +60,10 @@
                 niveau = niveau - 1;
             }
 
-            const niveau1 = document.getElementById("niv1");
-            const niveau2 = document.getElementById("niv2");
-            const niveau3 = document.getElementById("niv3");
-
             if (niveau === 1) {
-                btnZoom.classList.add("disabled");
-                niveau1.classList.add("selected");
-                niveau2.classList.remove("selected");
-                niveau3.classList.remove("selected");
+                document.getElementById("pointJoues").textContent = 1
             } else if (niveau === 2) {
-                niveau1.classList.remove("selected");
-                niveau2.classList.add("selected");
-                niveau3.classList.remove("selected");
+                document.getElementById("pointJoues").textContent = 2
             }
         });
 
@@ -89,14 +76,8 @@
             if (imageElement) {
                 imageElement.style.backgroundSize = "160%";
                 imageElement.style.backgroundPosition = "50% 30%";
-
-                const niveau1 = document.getElementById("niv1");
-                const niveau2 = document.getElementById("niv2");
-                const niveau3 = document.getElementById("niv3");
-
-                niveau1.classList.add("selected");
-                niveau2.classList.remove("selected");
-                niveau3.classList.remove("selected");
+                
+                document.getElementById("pointJoues").textContent = 1
 
                 niveau = 1;
             } else {
