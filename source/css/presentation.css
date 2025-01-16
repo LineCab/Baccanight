@@ -2,10 +2,6 @@
     body{
         height: 100vh;
         padding: 20px 0px;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center; */
         background: var(--orange);
         background-image: url(../images/etoilesFondOrange.png);
     }
@@ -24,7 +20,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 93vh;
+        height: 84vh;
     }
     .presentation1Texte{
         width: 97%;
